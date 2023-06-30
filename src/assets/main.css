@@ -1,0 +1,94 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+main {
+  margin-top: 25px;
+}
+
+input[type='text'] {
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 0 var(--color-background);
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 0.75rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  margin: 0.5rem 0;
+}
+
+.btn {
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  margin: auto 0;
+  padding: 0.5rem 0.75rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.1s ease-in;
+}
+
+.btn[disabled] {
+  background: var(--vt-c-black-mute);
+}
+
+.btn[disabled]:hover {
+  background: var(--vt-c-black-soft);
+}
+
+.btn-primary {
+  background: var(--vt-c-indigo);
+  color: var(--vt-c-white);
+}
+
+.btn-primary:hover {
+  background: var(--vt-c-divider-dark-2);
+}
+
+.btn-cancel {
+  background: var(--vt--cancel);
+  color: var(--vt-c-white);
+}
+
+.btn-cancel:hover {
+  background: var(--vt--cancel);
+  color: var(--vt-c-white);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+  }
+}
